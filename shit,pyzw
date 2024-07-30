@@ -1,0 +1,10 @@
+import ctypes
+
+# Define message box parameters
+MB_OK = 0x0
+ICON_INFORMATION = 0x40
+title = "Message"
+message = "You got pwned"
+
+# Display the message box
+ctypes.windll.user32.MessageBoxW(0, message, title, MB_OK | ICON_INFORMATION)
